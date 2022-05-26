@@ -1,21 +1,21 @@
+##This code is purely to create a visual representation of the graph we will be using 
+##and will save this graph in a png file called graph.png.
+
 import networkx as nx
 import matplotlib.pyplot as plt
 
 G=nx.Graph()
 
 #create nodes
-G.add_nodes_from(['A','B','C','D','E'])
+G.add_nodes_from(['0','1','2','3','4'])
 
 # Use add_edges_from to add pairwise relationships
-G.add_edge('B','C',weight=1)
-G.add_edge('A','C',weight=1)
-G.add_edge('B','D',weight=1)
-G.add_edge('D','A',weight=1)
-G.add_edge('D','E',weight=1)
-G.add_edge('B','E',weight=1)
-
-#print(G.nodes())
-#print(G.edges())
+G.add_edge('0','1',weight=3)
+G.add_edge('0','2',weight=4)
+G.add_edge('1','2',weight=2)
+G.add_edge('1','3',weight=2)
+G.add_edge('1','4',weight=3)
+G.add_edge('3','4',weight=2)
 
 #Creates the graph layout using all nodes and edges and stores in pos variable
 pos=nx.spring_layout(G)
